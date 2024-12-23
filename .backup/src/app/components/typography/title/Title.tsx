@@ -1,5 +1,5 @@
-import { CONSTANTS } from 'app/constants';
 import c from 'clsx';
+import { CONSTANTS } from 'constants';
 import { ReactElement, ReactNode, useEffect } from 'react';
 import styles from './Title.module.scss';
 

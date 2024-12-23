@@ -1,0 +1,11 @@
+@import 'src/styles/mixins.scss';
+
+.image {
+  width: 60px;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  @include add-animation() {
+    animation: spin infinite 20s linear;
+  }
+}

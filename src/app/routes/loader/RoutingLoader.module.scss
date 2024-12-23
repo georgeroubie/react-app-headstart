@@ -1,0 +1,16 @@
+@import 'src/styles/mixins.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 90px);
+
+  svg {
+    width: var(--font-size-large);
+
+    @include add-animation() {
+      animation: spin infinite 2s linear;
+    }
+  }
+}

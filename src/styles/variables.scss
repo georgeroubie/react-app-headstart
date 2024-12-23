@@ -1,0 +1,148 @@
+// Base
+$screen-size-tablet-small: 640px;
+$screen-size-tablet-large: 800px;
+$screen-size-desktop-small: 1024px;
+$screen-size-desktop-large: 1180px;
+
+:root {
+  --app-height: 100vh;
+
+  --spacing-xsmall: 0.125rem;
+  --spacing-small: 0.25rem;
+  --spacing-normal: 0.5rem;
+  --spacing-semi-large: 0.75rem;
+  --spacing-large: 1rem;
+  --spacing-xlarge: 1.5rem;
+  --spacing-xxlarge: 2rem;
+
+  --font-family: 'Arial', sans-serif;
+
+  --font-size-xsmall: 0.7rem;
+  --font-size-small: 0.85rem;
+  --font-size-normal: 1rem;
+  --font-size-semi-large: 1.25rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+
+  --line-height-xsmall: 0.85rem;
+  --line-height-small: 1rem;
+  --line-height-normal: 1.2rem;
+  --line-height-semi-large: 1.5rem;
+  --line-height-large: 1.8rem;
+  --line-height-xlarge: 2.4rem;
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+  --font-weight-extra-black: 950;
+
+  --shape-rectangle: 0px;
+  --shape-rounded: 8px;
+  --shape-circle: 50%;
+  --shape-divider: 0.125rem;
+
+  --screen-size-tablet-small: #{$screen-size-tablet-small};
+  --screen-size-tablet-large: #{$screen-size-tablet-large};
+  --screen-size-desktop-small: #{$screen-size-desktop-small};
+  --screen-size-desktop-large: #{$screen-size-desktop-large};
+
+  --container-max-width: 990px;
+}
+
+// Light theme
+$light-theme-blue: #266dd3;
+$light-theme-blue-light: #e1f2ff;
+$light-theme-green: #00bc8b;
+$light-theme-green-light: #edf7ee;
+$light-theme-yellow: #ffc200;
+$light-theme-yellow-light: #fffcdc;
+$light-theme-red: #ed2e2e;
+$light-theme-red-light: #fff5f3;
+$light-theme-black: #333333;
+$light-theme-grey: #9b9b9b;
+$light-theme-grey-light: #dfdfdf;
+$light-theme-grey-lighter: #f7f7f7;
+$light-theme-white: #ffffff;
+
+:root {
+  --background: #{$light-theme-grey-lighter};
+  --background-secondary: #{$light-theme-grey-light};
+  --surface: #{$light-theme-white};
+  --surface-secondary: #{$light-theme-black};
+  --success-primary: #{$light-theme-green};
+  --success-secondary: #{$light-theme-green-light};
+  --warning-primary: #{$light-theme-yellow};
+  --warning-secondary: #{$light-theme-yellow-light};
+  --error-primary: #{$light-theme-red};
+  --error-secondary: #{$light-theme-red-light};
+  --button-primary: #{$light-theme-green};
+  --button-primary-text: #{$light-theme-black};
+  --button-secondary: #{$light-theme-grey-lighter};
+  --button-secondary-text: #{$light-theme-black};
+  --button-info: #{$light-theme-blue};
+  --button-info-text: #{$light-theme-white};
+  --button-error: #{$light-theme-red};
+  --button-error-text: #{$light-theme-white};
+  --text-primary: #{$light-theme-black};
+  --text-secondary: #{$light-theme-grey};
+  --text-disabled: #{$light-theme-grey-light};
+  --border-primary: #{$light-theme-grey-light};
+  --border-secondary: #{$light-theme-grey};
+  --outline: #{$light-theme-yellow-light};
+  --backdrop: #{$light-theme-black};
+  --divider-primary: #{$light-theme-grey-lighter};
+  --box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.1);
+}
+
+// Dark theme
+$dark-theme-blue: #4cc0f0;
+$dark-theme-blue-light: #e1f2ff;
+$dark-theme-green: #00bc8b;
+$dark-theme-green-light: #edf7ee;
+$dark-theme-yellow: #ffc200;
+$dark-theme-yellow-light: #fffcdc;
+$dark-theme-red: #ff606a;
+$dark-theme-red-light: #fff5f3;
+$dark-theme-black: #171717;
+$dark-theme-black-light: #212121;
+$dark-theme-black-lightest: #353535;
+$dark-theme-grey: #9b9b9b;
+$dark-theme-grey-lighter: #dfdfdf;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #{$dark-theme-black};
+    --background-secondary: #{$dark-theme-grey-lighter};
+    --surface: #{$dark-theme-black-light};
+    --surface-secondary: #{$dark-theme-grey-lighter};
+    --success-primary: #{$dark-theme-green};
+    --success-secondary: #{$dark-theme-green-light};
+    --warning-primary: #{$dark-theme-yellow};
+    --warning-secondary: #{$dark-theme-yellow-light};
+    --error-primary: #{$dark-theme-red};
+    --error-secondary: #{$dark-theme-red-light};
+    --button-primary: #{$dark-theme-green};
+    --button-primary-text: #{$dark-theme-black};
+    --button-secondary: #{$dark-theme-black-lightest};
+    --button-secondary-text: #{$dark-theme-grey-lighter};
+    --button-info: #{$dark-theme-blue};
+    --button-info-text: #{$dark-theme-black};
+    --button-error: #{$dark-theme-red};
+    --button-error-text: #{$dark-theme-black};
+    --text-primary: #{$dark-theme-grey-lighter};
+    --text-secondary: #{$dark-theme-grey};
+    --text-disabled: #{$dark-theme-black-lightest};
+    --border-primary: #{$dark-theme-grey-lighter};
+    --border-secondary: #{$dark-theme-grey};
+    --outline: #{$dark-theme-grey-lighter};
+    --backdrop: #{$dark-theme-black};
+    --divider-primary: #{$dark-theme-grey-lighter};
+    --box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.1);
+  }
+}

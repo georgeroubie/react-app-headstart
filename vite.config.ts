@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react';
+import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import Sitemap from 'vite-plugin-sitemap';
@@ -20,6 +21,12 @@ export default defineConfig(({ mode }) => {
           chunkFileNames: `[name].${env.npm_package_version}.js`,
           assetFileNames: `[name].${env.npm_package_version}.[ext]`,
         },
+      },
+    },
+    resolve: {
+      alias: {
+        '@app': path.resolve(__dirname, './src/app'), // Add alias for `@app`,
+        src: path.resolve(__dirname, './src'), // Add alias for `src`,
       },
     },
     plugins: [
