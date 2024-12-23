@@ -1,6 +1,6 @@
 # Requirements
 
-- [Nodejs v20.9.0+](https://nodejs.org/en/download)
+- [Nodejs 18+](https://nodejs.org/en/download)
 - [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
 - [VSCode](https://code.visualstudio.com/download)
 
