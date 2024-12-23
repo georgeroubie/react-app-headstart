@@ -91,5 +91,14 @@ export default defineConfig(({ mode }) => {
         },
       }),
     ],
+    test: {
+      globals: true, // Allows to use `describe`, `it`, etc. without importing
+      environment: 'jsdom', // Simulates a browser environment
+      setupFiles: './src/setupTests.ts', // Optional, for test setup files
+      include: ['src/**/*.test.ts', 'src/**/*.test.tsx', 'src/**/*.test.js'], // Test file pattern
+      coverage: {
+        reporter: ['text', 'html'], // Coverage reports
+      },
+    },
   };
 });

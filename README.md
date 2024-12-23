@@ -18,8 +18,9 @@
 - `yarn lint`
 - `yarn generate-pwa-assets`
 - `yarn test`
+- `yarn test:run`
 - `yarn test:ui`
-- `yarn coverage`
+- `yarn test:coverage`
 
 # How to use it for your own projects
 
