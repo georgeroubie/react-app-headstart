@@ -1,10 +1,9 @@
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { ReactElement } from 'react';
 import { BrowserRouter } from 'react-router';
-import { afterEach } from 'vitest';
 
-afterEach(() => {
-  cleanup();
+beforeAll(() => {
+  window.scrollTo = vitest.fn();
 });
 
 function customRender(ui: ReactElement, options = {}) {

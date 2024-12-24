@@ -93,7 +93,7 @@ export default defineConfig(({ mode }) => {
     test: {
       globals: true,
       environment: 'jsdom',
-      setupFiles: './src/setupTests.ts',
+      setupFiles: './src/setup-tests.ts',
       include: ['src/**/*.test.ts', 'src/**/*.test.tsx', 'src/**/*.test.js', 'src/**/*.test.jsx'],
       coverage: {
         reporter: ['text', 'html'],
