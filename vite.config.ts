@@ -4,7 +4,6 @@ import { defineConfig, loadEnv } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import Sitemap from 'vite-plugin-sitemap';
 
-// https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
@@ -25,8 +24,8 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@app': path.resolve(__dirname, './src/app'), // Add alias for `@app`,
-        src: path.resolve(__dirname, './src'), // Add alias for `src`,
+        '@app': path.resolve(__dirname, './src/app'),
+        src: path.resolve(__dirname, './src'),
       },
     },
     plugins: [
@@ -92,12 +91,12 @@ export default defineConfig(({ mode }) => {
       }),
     ],
     test: {
-      globals: true, // Allows to use `describe`, `it`, etc. without importing
-      environment: 'jsdom', // Simulates a browser environment
-      setupFiles: './src/setupTests.ts', // Optional, for test setup files
-      include: ['src/**/*.test.ts', 'src/**/*.test.tsx', 'src/**/*.test.js'], // Test file pattern
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './src/setupTests.ts',
+      include: ['src/**/*.test.ts', 'src/**/*.test.tsx', 'src/**/*.test.js', 'src/**/*.test.jsx'],
       coverage: {
-        reporter: ['text', 'html'], // Coverage reports
+        reporter: ['text', 'html'],
       },
     },
   };
