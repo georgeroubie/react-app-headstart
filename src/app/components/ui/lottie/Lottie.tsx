@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-
 import useColorTheme from '@app/hooks/useColorTheme/useColorTheme';
 import useInView from '@app/hooks/useInView/useInView';
 import useReducedMotion from '@app/hooks/useReducedMotion/useReducedMotion';
@@ -102,7 +97,9 @@ const Lottie = ({
     }
 
     return () => {
-      lottie.current && lottie.current.destroy();
+      if (lottie.current) {
+        lottie.current.destroy();
+      }
     };
   }, [autoplay, loop, name, player, speed, colorTheme, reducedMotion, hasIntersect, onComplete]);
 

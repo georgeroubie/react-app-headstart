@@ -29,7 +29,7 @@
     },
 
     /* Types */
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "@types/web"]
   },
   "include": ["src"]
 }
