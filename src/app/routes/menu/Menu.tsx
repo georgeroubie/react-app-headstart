@@ -1,6 +1,6 @@
-import { ROUTES } from '@routes/routes';
-import { Logo } from '@ui-components';
+import Logo from '@app/components/ui/logo/Logo';
 import { NavLink } from 'react-router-dom';
+import { ROUTES } from '../routes';
 import styles from './Menu.module.scss';
 
 const menuItems = [

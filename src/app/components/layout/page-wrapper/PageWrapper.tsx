@@ -1,4 +1,4 @@
-import { useBodyHeight } from '@hooks';
+import useBodyHeight from '@app/hooks/useBodyHeight/useBodyHeight';
 import { ReactElement, ReactNode, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './PageWrapper.module.scss';

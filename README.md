@@ -1,6 +1,6 @@
 # Requirements
 
-- [Nodejs 18+](https://nodejs.org/en/download)
+- [Nodejs v20.9.0+](https://nodejs.org/en/download)
 - [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
 - [VSCode](https://code.visualstudio.com/download)
 
@@ -18,8 +18,9 @@
 - `yarn lint`
 - `yarn generate-pwa-assets`
 - `yarn test`
+- `yarn test:run`
 - `yarn test:ui`
-- `yarn coverage`
+- `yarn test:coverage`
 
 # How to use it for your own projects
 

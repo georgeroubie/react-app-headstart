@@ -1,7 +1,7 @@
-import logo from '@images/react.svg';
-import { ROUTES } from '@routes/routes';
+import { ROUTES } from '@app/routes/routes';
 import { ReactElement } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from 'src/assets/react.svg';
 import styles from './Logo.module.scss';
 
 type LogoProps = {

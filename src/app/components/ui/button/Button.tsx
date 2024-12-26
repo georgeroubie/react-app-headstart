@@ -1,4 +1,4 @@
-import { SpinnerIcon } from '@icons';
+import SpinnerIcon from '@app/components/icons/SpinnerIcon';
 import c from 'clsx';
 import { ReactElement, MouseEvent as ReactMouseEvent, ReactNode } from 'react';
 import styles from './Button.module.scss';

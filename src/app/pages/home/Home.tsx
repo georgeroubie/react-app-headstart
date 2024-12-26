@@ -1,6 +1,10 @@
-import { PageWrapper } from '@layout-components';
-import { Description, Hyperlink, Subtitle, Title } from '@typography-components';
-import { Donation } from '@ui-components';
+import PageWrapper from '@app/components/layout/page-wrapper/PageWrapper';
+import Description from '@app/components/typography/description/Description';
+import Hyperlink from '@app/components/typography/hyperlink/Hyperlink';
+import Subtitle from '@app/components/typography/subtitle/Subtitle';
+import Title from '@app/components/typography/title/Title';
+import Donation from '@app/components/ui/donation';
+import { CONSTANTS } from '@app/constants';
 import { ReactElement } from 'react';
 import styles from './Home.module.scss';
 
@@ -52,6 +56,8 @@ const Home = (): ReactElement => {
           GitHub
         </Hyperlink>
         .
+        <br />
+        App version: {CONSTANTS.APP_VERSION}
       </Description>
       <Donation />
     </PageWrapper>

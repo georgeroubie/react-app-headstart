@@ -1,21 +1,22 @@
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { ReactElement } from 'react';
-import { afterEach } from 'vitest';
+import { BrowserRouter } from 'react-router';
 
-afterEach(() => {
-  cleanup();
+beforeAll(() => {
+  window.scrollTo = vitest.fn();
 });
 
 function customRender(ui: ReactElement, options = {}) {
   return render(ui, {
     // wrap provider(s) here if needed
-    wrapper: ({ children }) => children,
+    wrapper: ({ children }) => <BrowserRouter>{children}</BrowserRouter>,
     ...options,
   });
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export * from '@testing-library/react';
+
 export { default as userEvent } from '@testing-library/user-event';
-export * from 'vitest';
 // override render export
 export { customRender as render };

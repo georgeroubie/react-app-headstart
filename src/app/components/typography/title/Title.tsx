@@ -1,4 +1,4 @@
-import { CONSTANTS } from 'app/constants';
+import { CONSTANTS } from '@app/constants';
 import c from 'clsx';
 import { ReactElement, ReactNode, useEffect } from 'react';
 import styles from './Title.module.scss';

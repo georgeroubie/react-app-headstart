@@ -1,18 +1,13 @@
-/// <reference types="vitest" />
-/// <reference types="vite/client" />
-
 import react from '@vitejs/plugin-react';
-import { loadEnv } from 'vite';
+import path from 'path';
+import { defineConfig, loadEnv } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import { defineConfig } from 'vitest/config';
+import Sitemap from 'vite-plugin-sitemap';
 
-import sitemapPlugin from 'vite-plugin-sitemap';
-
-export default ({ mode }) => {
+export default defineConfig(({ mode }) => {
   const env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
-  return defineConfig({
+  return {
     build: {
       rollupOptions: {
         output: {
@@ -27,17 +22,22 @@ export default ({ mode }) => {
         },
       },
     },
+    resolve: {
+      alias: {
+        '@app': path.resolve(__dirname, './src/app'),
+        src: path.resolve(__dirname, './src'),
+      },
+    },
     plugins: [
-      tsconfigPaths(),
       react(),
-      sitemapPlugin({
+      Sitemap({
         hostname: env.VITE_PUBLIC_URL,
-        dynamicRoutes: JSON.parse(env.VITE_SITEMAP_URLS),
+        dynamicRoutes: JSON.parse(env.VITE_SITEMAP_URLS || ''),
         robots: [
           {
             userAgent: '*',
-            allow: JSON.parse(env.VITE_ALLOW_ROBOTS_URLS),
-            disallow: JSON.parse(env.VITE_DISALLOW_ROBOTS_URLS),
+            allow: JSON.parse(env.VITE_ALLOW_ROBOTS_URLS || ''),
+            disallow: JSON.parse(env.VITE_DISALLOW_ROBOTS_URLS || ''),
           },
         ],
       }),
@@ -93,8 +93,14 @@ export default ({ mode }) => {
     test: {
       globals: true,
       environment: 'jsdom',
-      include: ['**/*.test.tsx', '**/*.test.ts'],
-      setupFiles: './src/test/setup.ts',
+      setupFiles: './src/setup-tests.ts',
+      include: ['src/**/*.test.ts', 'src/**/*.test.tsx', 'src/**/*.test.js', 'src/**/*.test.jsx'],
+      coverage: {
+        reporter: ['text', 'html'],
+      },
     },
-  });
-};
+    define: {
+      __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    },
+  };
+});

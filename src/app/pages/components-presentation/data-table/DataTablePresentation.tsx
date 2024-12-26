@@ -1,5 +1,5 @@
-import { Subtitle } from '@typography-components';
-import { DataTable } from '@ui-components';
+import Subtitle from '@app/components/typography/subtitle/Subtitle';
+import DataTable from '@app/components/ui/data-table/DataTable';
 import { ReactElement } from 'react';
 
 const DataTablePresentation = (): ReactElement => {

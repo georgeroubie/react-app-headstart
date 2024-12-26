@@ -1,5 +1,5 @@
-import { describe, expect, it, render, screen } from '@utils/test-utils';
-import Home from '.';
+import { render, screen } from '@app/testing/test-utils';
+import Home from './Home';
 
 describe('<Home />', () => {
   it('should load the page title', () => {

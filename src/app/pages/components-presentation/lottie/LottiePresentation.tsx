@@ -1,5 +1,6 @@
-import { Subtitle } from '@typography-components';
-import { Lottie, LottieAnimations } from '@ui-components';
+import Subtitle from '@app/components/typography/subtitle/Subtitle';
+import { LottieAnimations } from '@app/components/ui/lottie/constants';
+import Lottie from '@app/components/ui/lottie/Lottie';
 import { ReactElement } from 'react';
 
 const LottiePresentation = (): ReactElement => {

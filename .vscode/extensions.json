@@ -2,6 +2,8 @@
   "recommendations": [
     "esbenp.prettier-vscode",
     "EditorConfig.EditorConfig",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "clinyong.vscode-css-modules",
+    "vunguyentuan.vscode-css-variables"
   ]
 }

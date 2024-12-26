@@ -1,4 +1,5 @@
-import { Hyperlink, Subtitle } from '@typography-components';
+import Hyperlink from '@app/components/typography/hyperlink/Hyperlink';
+import Subtitle from '@app/components/typography/subtitle/Subtitle';
 import { ReactElement } from 'react';
 import styles from './Donation.module.scss';
 

@@ -1,4 +1,4 @@
-import { CheckIcon } from '@icons';
+import CheckIcon from '@app/components/icons/CheckIcon';
 import c from 'clsx';
 import { ChangeEvent, ReactElement } from 'react';
 import styles from './Checkbox.module.scss';

@@ -1,15 +1,16 @@
-import Home from '@pages/home';
 import { ReactElement, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import RoutingLoader from './loader';
+
+import Home from '@app/pages/home/Home';
+import RoutingLoader from './loader/RoutingLoader';
 import { ROUTES } from './routes';
-import AppRoutesWrapper from './wrapper';
+import AppRoutesWrapper from './wrapper/AppRoutesWrapper';
 
 // Lazy load pages
-const ComponentsPresentation = lazy(() => import('@pages/components-presentation'));
-const NotFound = lazy(() => import('@pages/not-found'));
+const ComponentsPresentation = lazy(() => import('@app/pages/components-presentation/ComponentsPresentation'));
+const NotFound = lazy(() => import('@app/pages/not-found/NotFound'));
 
-const Routing = (): ReactElement => {
+const AppRouter = (): ReactElement => {
   return (
     <BrowserRouter>
       <Routes>
@@ -37,4 +38,4 @@ const Routing = (): ReactElement => {
   );
 };
 
-export default Routing;
+export default AppRouter;
